@@ -1,0 +1,49 @@
+.nav-link
+{
+    font-family: 'Abril Fatface', cursive;
+}
+img:hover
+{
+    cursor: crosshair
+}
+.lightbox-container
+{
+    position: fixed;
+    top: 0%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.7);
+    display:none !important
+}
+.lightbox-item
+{
+    height: 95%;
+    width: 30%;
+    background-color: black;
+    background-image: url(../imgs/Man/man-main.jpg);
+    background-size: 100% 100%;
+}
+.show
+{
+    display: flex !important 
+}
+#prev:hover
+{
+    color: #FFF;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+#next:hover
+{
+    color: #FFF;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+#close:hover
+{
+    color: #FFF;
+    transform: rotate(180deg);
+    transition: 1s;
+    cursor:pointer
+}
