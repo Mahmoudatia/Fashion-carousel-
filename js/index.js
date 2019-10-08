@@ -15,6 +15,9 @@
 // the min lenght of images array to repeate 
 // the array from max
 
+//(4)
+//connecting keybord to slider left arrow , right arrow and escape btn 
+
 
 var imgs = document.getElementsByTagName("img");
 var lightboxcontainer = document.querySelector(".lightbox-container");
@@ -40,23 +43,47 @@ for(var i=0 ; i<imgs.length ; i++)
 
 //(2)
 next.addEventListener("click",function () { 
+    nextMove()
+ });
+
+
+ function nextMove(){
     currentindex++
     if(currentindex == imgarr.length){
         currentindex = 0 ;
     }
     lightboxitem.style.backgroundImage = "url("+imgarr[currentindex].src+")"
- });
-
+ }
 
 //(3)
  prev.addEventListener("click",function () { 
+    prevMove()
+ });
+
+ function prevMove(){
     currentindex--
     if(currentindex < 0){
         currentindex = imgarr.length -1  ;
     }
     lightboxitem.style.backgroundImage = "url("+imgarr[currentindex].src+")"
- });
+}
 
  close.addEventListener("click", function () { 
      lightboxcontainer.classList.remove("show")
   })
+
+
+
+//(4)
+  document.addEventListener("keydown",function (e) { 
+    if(e.keyCode == 27){
+        lightboxcontainer.classList.remove("show")
+    }
+    else if(e.keyCode == 39){
+        nextMove()
+    }
+    else if (e.keyCode == 37)
+    {
+        prevMove()
+    }
+   })
