@@ -87,3 +87,12 @@ next.addEventListener("click",function () {
         prevMove()
     }
    })
+
+   //disable lightbox-Conatiner 
+
+   lightboxcontainer.addEventListener("click", function (e) {
+
+    if(e.target == lightboxcontainer){
+        lightboxcontainer.classList.remove("show")
+    }
+     })
